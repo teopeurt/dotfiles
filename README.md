@@ -3,7 +3,7 @@ My .emacs, .zshrc, .vimrc...
 Setup Guide (mac)
 =================
 
-$ git clone https://dengzhp@github.com/dengzhp/dotfiles.git
+$ git clone --recursive https://github.com/dengzhp/dotfiles.git
 
 .emacs
 -----------
