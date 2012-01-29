@@ -32,6 +32,7 @@ export PATH=~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 alias ssh3='ssh -p32200'
 alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 alias ec="emacsclient -n"
+alias la='ls -a'
 
 
 # ;; MIT Scheme
