@@ -26,5 +26,5 @@ Setup Guide (mac)
 .vimrc
 ----------
 
-    $ ln -s /path/to/dotfiles/.vimrc ~/.zshrc
+    $ ln -s /path/to/dotfiles/.vimrc ~/.vimrc
 
