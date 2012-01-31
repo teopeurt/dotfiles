@@ -49,3 +49,14 @@ browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-s
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/plugins/auto-complete/ac-dict")
 (ac-config-default)
+
+;; auto-complete-clang
+;; https://github.com/mikeandmore/auto-complete-clang/
+(require 'auto-complete-clang)
+(setq clang-completion-suppress-error 't)
+
+(defun my-c-mode-common-hook()
+  (define-key c-mode-base-map (kbd "M-/") 'ac-complete-clang)
+)
+
+(add-hook 'c-mode-common-hook 'my-c-mode-common-hook)

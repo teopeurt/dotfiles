@@ -229,7 +229,7 @@ If ARG is non-numeric, copy line from beginning of the current line."
 ;; C/C++/Java mode
 (defun my-c-mode-hook()
 (interactive)
-(define-key c-mode-map [return] 'newline-and-indent)
+;(define-key c-mode-map [return] 'newline-and-indent)
 (c-toggle-auto-state)
 (c-semi&comma-no-newlines-before-nonblanks)
 (c-toggle-hungry-state)
@@ -268,12 +268,12 @@ If ARG is non-numeric, copy line from beginning of the current line."
 (setq abbrev-mode t)
 ;;左侧显示行号, linum.el
 (linum-mode 1)
-(define-key c++-mode-map [return] 'newline-and-indent)
+;(define-key c++-mode-map [return] 'newline-and-indent)
 )
 
 (defun my-java-mode()
 (interactive)
-(define-key java-mode-map [return] 'newline-and-indent)
+;(define-key java-mode-map [return] 'newline-and-indent)
 (c-set-style "java")
 (c-toggle-auto-state)
 (c-toggle-hungry-state)
