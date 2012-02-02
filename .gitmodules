@@ -1,3 +1,6 @@
 [submodule "vendor/yasnippet"]
 	path = vendor/yasnippet
 	url = https://github.com/capitaomorte/yasnippet
+[submodule "linux/.emacs.d/plugins/eim"]
+	path = linux/.emacs.d/plugins/eim
+	url = https://github.com/viogus/eim.git
