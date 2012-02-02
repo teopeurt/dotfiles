@@ -38,10 +38,8 @@ browse-url (concat "http://www.google.com/search?ie=utf-8&oe=utf-8&q=" (buffer-s
 
 (require 'gist)
 
+;;nxhtml
 (load "~/.emacs.d/plugins/nxhtml/autostart")
-
-;; MIT Scheme
-(setenv "MITSCHEME_LIBRARY_PATH"  "/Applications/mit-scheme.app/Contents/Resources")
 
 
 ;;auto-complete

@@ -23,7 +23,7 @@
 (setq line-number-mode t)		;;;;显示行号
 (setq column-number-mode t)		;;;;显示列号
 (setq-default indent-tabs-mode t)
-(setq default-tab-width 4)
+(setq-default tab-width 4)
 ;(setq scroll-step 1)
 (setq scroll-margin 3
       scroll-conservatively 10000)
