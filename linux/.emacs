@@ -1,4 +1,4 @@
-;;;;  my emacs.app configuration
+;; https://github.com/dengzhp/dotfiles.git
 
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/plugins")
