@@ -34,7 +34,4 @@ alias emacsclient="/Applications/Emacs.app/Contents/MacOS/bin/emacsclient"
 alias ec="emacsclient -n"
 alias la='ls -a'
 
-
-# ;; MIT Scheme
-export MITSCHEME_LIBRARY_PATH=/Applications/mit-scheme.app/Contents/Resources
 export EDITOR=vim
