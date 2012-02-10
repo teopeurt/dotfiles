@@ -6,6 +6,14 @@
 ;;global
 (autoload 'gtags-mode "gtags" "" t)
 
+(setq gtags-suggested-key-mapping t)
+
+(add-hook 'gtags-select-mode-hook
+  '(lambda ()
+     (setq hl-line-face 'underline)
+     (hl-line-mode 1)
+))
+
 (setq gtags-mode-hook
    '(lambda ()
          (define-key gtags-mode-map "\eh" 'gtags-display-browser)
