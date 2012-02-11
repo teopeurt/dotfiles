@@ -27,6 +27,7 @@ plugins=(git svn osx brew)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+unsetopt correct_all
 export PATH=~/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
 
 alias ssh3='ssh -p32200'
