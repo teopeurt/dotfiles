@@ -54,12 +54,12 @@
 (require 'uniquify)
 
 (create-fontset-from-fontset-spec
-"-apple-bitstream vera sans mono-medium-r-normal--14-*-*-*-*-*-fontset-mymonaco,
-ascii:-apple-Monaco-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1,
-chinese-gb2312:-apple-STHeiti-medium-normal-normal-14-*-*-*-*-p-0-iso10646-1,
-utf-8:-apple-STHeiti-medium-normal-normal-14-*-*-*-*-p-0-iso10646-1,
-latin-iso8859-1:-apple-Monaco-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1,
-mule-unicode-0100-24ff:-apple-Monaco-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+"-apple-bitstream vera sans mono-medium-r-normal--15-*-*-*-*-*-fontset-mymonaco,
+ascii:-apple-Monaco-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1,
+chinese-gb2312:-apple-STHeiti-medium-normal-normal-15-*-*-*-*-p-0-iso10646-1,
+utf-8:-apple-STHeiti-medium-normal-normal-15-*-*-*-*-p-0-iso10646-1,
+latin-iso8859-1:-apple-Monaco-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1,
+mule-unicode-0100-24ff:-apple-Monaco-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1")
 
 (setq default-frame-alist (append '((font . "fontset-mymonaco")) default-frame-alist))
 (set-default-font "fontset-mymonaco")
@@ -106,6 +106,8 @@ If the new path's directories does not exist, create them."
 
 
 ;;My keys binding
+
+(global-set-key (kbd "C-M-f") 'ns-toggle-fullscreen)
 
 ;;Genral purpose
 (global-set-key [(meta g)] 'goto-line)
