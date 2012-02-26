@@ -17,6 +17,10 @@ unzip nxhtml-2.08-100425.zip
 * mac
 
 ```
+brew install emacs --cocoa
+```
+
+```
 ln -s /path/to/dotfiles/mac/.emacs ~/.emacs
 ln -s /path/to/dotfiles/mac/.emacs.d  ~/.emacs.d
 ```
