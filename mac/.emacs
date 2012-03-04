@@ -108,6 +108,7 @@ If the new path's directories does not exist, create them."
 ;;My keys binding
 
 (global-set-key (kbd "C-M-f") 'ns-toggle-fullscreen)
+(global-set-key (kbd "A-SPC") 'just-one-space)
 
 ;;Genral purpose
 (global-set-key [(meta g)] 'goto-line)
