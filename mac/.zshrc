@@ -36,3 +36,5 @@ alias ec="emacsclient -n"
 alias la='ls -a'
 
 export EDITOR=vim
+
+export PYTHONSTARTUP=~/.pythonrc
