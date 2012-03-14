@@ -1,7 +1,7 @@
 ;; color-theme
 (require 'color-theme)
 (color-theme-initialize)
-(color-theme-gray30)
+(color-theme-tangotango)
 
 ;;global
 (autoload 'gtags-mode "gtags" "" t)

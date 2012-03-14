@@ -2,6 +2,7 @@ syntax on
 set nu
 set hlsearch
 set showcmd
-set autoindent
-set cindent
 color torte
+set ts=4
+set expandtab
+set ai
