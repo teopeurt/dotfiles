@@ -2,16 +2,16 @@
 
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/plugins")
-(progn (cd "~"))
+(progn (cd "~/Dropbox/Notes/org"))
 
 ;;;;苹果键位remap
 (setq mac-command-modifier 'meta) ;映射苹果键
 (setq mac-control-modifier 'control) ;映射Ctrl键
 (setq mac-option-modifier 'alt) ;映射Alt键
 
-;;disable some trackpad actions
-(dolist (k '([mouse-1] [down-mouse-1] [C-down-mouse-1] [S-mouse-1]))
-(global-unset-key k))
+;;;;disable some trackpad actions
+;;(dolist (k '([mouse-1] [down-mouse-1] [C-down-mouse-1] [S-mouse-1]))
+;;(global-unset-key k))
 
 ;; start emacs-server
 (server-start)
@@ -54,36 +54,41 @@
 (require 'uniquify)
 
 (create-fontset-from-fontset-spec
-"-apple-bitstream vera sans mono-medium-r-normal--15-*-*-*-*-*-fontset-mymonaco,
-ascii:-apple-Monaco-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1,
-chinese-gb2312:-apple-STHeiti-medium-normal-normal-15-*-*-*-*-p-0-iso10646-1,
-utf-8:-apple-STHeiti-medium-normal-normal-15-*-*-*-*-p-0-iso10646-1,
-latin-iso8859-1:-apple-Monaco-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1,
-mule-unicode-0100-24ff:-apple-Monaco-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1")
+"-apple-bitstream vera sans mono-medium-r-normal--12-*-*-*-*-*-fontset-mymonaco,
+ascii:-apple-Monaco-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1,
+chinese-gb2312:-apple-STHeiti-medium-normal-normal-12-*-*-*-*-p-0-iso10646-1,
+utf-8:-apple-STHeiti-medium-normal-normal-12-*-*-*-*-p-0-iso10646-1,
+latin-iso8859-1:-apple-Monaco-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1,
+mule-unicode-0100-24ff:-apple-Monaco-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
 
 (setq default-frame-alist (append '((font . "fontset-mymonaco")) default-frame-alist))
 (set-default-font "fontset-mymonaco")
 
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(c-basic-offset 4)
  '(c-default-style "K&R")
  '(c-echo-syntactic-information-p t)
  '(c-report-syntactic-errors t)
  '(c-tab-always-indent nil)
+ '(column-number-mode t)
+ '(cua-mode t nil (cua-base))
+ '(display-time-mode t)
  '(exec-path (quote ("/usr/bin" "/bin" "/usr/sbin" "/sbin" "/usr/local/bin" "/Applications/Emacs.app/Contents/MacOS/bin")))
  '(kill-whole-line t)
  '(rst-level-face-base-color "#000000")
+ '(show-paren-mode t)
+ '(tool-bar-mode nil)
  '(uniquify-buffer-name-style (quote post-forward) nil (uniquify)))
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-)
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
 
 ; return a backup file path of a give file path
 ; with full directory mirroring from a root dir
@@ -307,3 +312,20 @@ If ARG is non-numeric, copy line from beginning of the current line."
 ;;plugins
 
 (load "~/.emacs.d/load_plugins")
+
+
+;; set fill columns
+(setq-default fill-column 72)
+
+;; use 2 tab character
+(setq standard-indent 2)
+
+;; markdown mode http://jblevins.org/projects/markdown-mode/
+(autoload 'markdown-mode "markdown-mode.el" 
+	  "Major mode for editing Markdown files" t) 
+(setq auto-mode-alist 
+      (cons '("\\.text" . markdown-mode) auto-mode-alist))
+
+;; ----- Android Mode ------
+(require 'android-mode)
+(setq android-mode-sdk-dir "/usr/local/Cellar/android-sdk/r20.0.3")
