@@ -96,3 +96,7 @@ if !exists(":DiffOrig")
 endif
 
 colorscheme torte
+
+call pathogen#infect()
+
+au BufNewFile,BufRead *.confwiki set filetype=confluencewiki
